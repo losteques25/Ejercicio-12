@@ -1,0 +1,36 @@
+# ORDENA POSITIVOS
+#  ordena_positivos([6, 3, -2, 5, -8, 2, -2])
+
+def ordena_positivos(valor):
+    posicion = -1  # Le doy valor negativo para cuando sumo no pase del índice
+    negativos = []
+    indice = []
+    sin_negativos = []
+    for mvalor in valor:
+        posicion = posicion + 1
+        if mvalor < 0:
+            negativos.append(mvalor)    # Creo lisa con valores negativos
+            indice.append(posicion)     # Guardo en una lista la posición de los negativos
+    for borrar in valor:
+        if borrar > 0:
+            sin_negativos.append(borrar)  # Creo una lista con valores positivos nada más
+
+    posicion = -1  # Le doy valor negativo para cuando sumo no pase del índice
+    ordenado = sorted(sin_negativos)  # Creo lista con los valores ordenados
+    for numero in negativos:
+        posicion = posicion + 1  
+        lugar = indice[posicion]
+        ordenado.insert(lugar, numero)  # coloco los negativos en su posición
+  
+    print("La lista ordenada es: ",ordenado)
+
+   
+
+
+
+
+
+    
+    
+
+  
